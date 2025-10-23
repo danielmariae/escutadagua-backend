@@ -26,6 +26,5 @@ public class Usuario extends PanacheEntityBase {
     @Column(nullable = false)
     private String senha;
 
-    @Column(nullable = false)
     private Double metaDiaria; // em minutos de água
 }

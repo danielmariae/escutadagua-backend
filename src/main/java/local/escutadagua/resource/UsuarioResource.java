@@ -52,7 +52,7 @@ public class UsuarioResource {
 
     @GET
     @Path("email/{email}")
-    public Response buscarPorMatricula(@PathParam("email") String email) {
+    public Response buscarPorEmail(@PathParam("email") String email) {
         UsuarioResponseDTO usuario = usuarioService.buscarPorEmail(email);
         return usuario != null 
             ? Response.ok(usuario).build() 

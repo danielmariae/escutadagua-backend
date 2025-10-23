@@ -48,7 +48,7 @@ public class AlertaService {
     // ===============================================
     
     @Transactional
-    private void criarAlerta(Usuario usuario, TipoAlerta tipo, String titulo, String mensagem) {
+    public void criarAlerta(Usuario usuario, TipoAlerta tipo, String titulo, String mensagem) {
         Alerta alerta = new Alerta();
         alerta.setUsuario(usuario);
         alerta.setTipoAlerta(tipo);

@@ -10,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -23,7 +24,8 @@ public class ConsumoAgua extends PanacheEntityBase {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     Long id;
     
-    @Column(nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuario;
 
     @Column(nullable = false)
